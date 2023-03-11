@@ -15,6 +15,12 @@ _PS1_() {
     export PS1="\n\033[0m${cmdhd}\033[0m\n$ "
 }
 
+# Global path.
+_PATH_() {
+    #
+    export PATH="${HOME}/.local/bin:${PATH}"
+}
+
 # Alias new commands.
 _ALIAS_() {
     #
@@ -40,6 +46,7 @@ _CONDA_() {
 }
 #
 _PS1_
+_PATH_
 _ALIAS_
 
 # Module
