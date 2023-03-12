@@ -37,7 +37,7 @@ _CUDA_() {
 _SLURM_() {
     #
     module load slurm
-    export SQUEUE_FORMAT="%.18i %.9P %.8u %.18j %.2t %.10M"
+    export SQUEUE_FORMAT="%.10i %.9P %.8u %.28j %.2t %.10M"
 }
 
 # CONDA
