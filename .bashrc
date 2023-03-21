@@ -66,23 +66,5 @@ _ALIAS_
 _CUDA_
 _SLURM_
 
-<<<<<<< HEAD
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("/homes/gao462/${DISK}/Library/MiniConda3/bin/conda" 'shell.bash' 'hook' 2>/dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/homes/gao462/${DISK}/Library/MiniConda3/etc/profile.d/conda.sh" ]; then
-        . "/homes/gao462/${DISK}/Library/MiniConda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/homes/${DISK}/Studio/Library/MiniConda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-=======
->>>>>>> dev
 #
 _CONDA_
