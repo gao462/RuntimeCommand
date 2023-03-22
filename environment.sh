@@ -45,7 +45,7 @@ install() {
 
 #
 vercu=cu117
-verth=1.13.0
+verth=2.0.0
 
 #
 install black "" 23.1.0
@@ -61,6 +61,7 @@ install pandas "" 1.5.3
 install seaborn "" 0.12.2
 install lmdb "" 1.4.0
 install torch "" ${verth} --extra-index-url https://download.pytorch.org/whl/${vercu}
+install pyg_lib "" 0.2.0 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-scatter "" 2.1.1 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-sparse "" 0.6.17 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-cluster "" 1.6.1 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
