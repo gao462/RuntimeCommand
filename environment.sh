@@ -4,9 +4,9 @@ set -e
 #
 project=$(basename $(pwd))
 code=$(basename $(dirname $(pwd)))
-if [[
-    ${CONDA_DEFAULT_ENV} != GaSOps && ${project} == RuntimeCommand && ( ${code} == Coding || ${code} == Coded )
-]]; then
+if [[ 
+    ${CONDA_DEFAULT_ENV} != GaSOps && ${project} == RuntimeCommand && (${code} == Coding || ${code} == Coded) ]] \
+    ; then
     #
     target=${code}-${project}
     output=${CONDA_DEFAULT_ENV}
@@ -17,6 +17,7 @@ fi
 #
 declare -A installed
 declare -A latests
+declare -a ignores
 
 # Using package installer for Python to maintain.
 install() {
@@ -58,12 +59,16 @@ install scikit-learn "" 1.2.2
 install matplotlib "" 3.7.1
 install pandas "" 1.5.3
 install seaborn "" 0.12.2
+install lmdb "" 1.4.0
 install torch "" ${verth} --extra-index-url https://download.pytorch.org/whl/${vercu}
 install torch-scatter "" 2.1.1 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
-install torch-sparse "" 0.6.16 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
+install torch-sparse "" 0.6.17 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-cluster "" 1.6.1 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-spline-conv "" 1.2.2 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-geometric "" 2.2.0 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
+
+#
+ignores+=("torch")
 
 #
 outdate() {
