@@ -48,7 +48,7 @@ vercu=cu117
 verth=2.0.0
 
 #
-install black "" 23.1.0
+install black "" 23.3.0
 install mypy "" 1.1.1
 install pytest "" 7.2.2
 install pytest-cov "" 4.0.0
@@ -66,7 +66,7 @@ install torch-scatter "" 2.1.1 -f https://data.pyg.org/whl/torch-${verth}+${verc
 install torch-sparse "" 0.6.17 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-cluster "" 1.6.1 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 install torch-spline-conv "" 1.2.2 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
-install torch-geometric "" 2.2.0 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
+install torch-geometric "" 2.3.0 -f https://data.pyg.org/whl/torch-${verth}+${vercu}.html
 
 #
 ignores+=("torch")
