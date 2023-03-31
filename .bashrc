@@ -38,18 +38,18 @@ _SLURM_() {
 # CONDA
 _CONDA_() {
     #
-    __conda_setup="$("/homes/gao462/Disk-RAMOS/Library/MiniConda3/bin/conda" 'shell.bash' 'hook' 2>/dev/null)"
+    __conda_setup="$("${DISK}/Library/MiniConda3/bin/conda" 'shell.bash' 'hook' 2>/dev/null)"
     if [ $? -eq 0 ]; then
         #
         eval "$__conda_setup"
     else
         #
-        if [ -f "/homes/gao462/Disk-RAMOS/Library/MiniConda3/etc/profile.d/conda.sh" ]; then
+        if [ -f "${DISK}/Library/MiniConda3/etc/profile.d/conda.sh" ]; then
             #
-            . "/homes/gao462/Disk-RAMOS/Library/MiniConda3/etc/profile.d/conda.sh"
+            . "${DISK}/Library/MiniConda3/etc/profile.d/conda.sh"
         else
             #
-            export PATH="/homes/gao462/Disk-RAMOS/Library/MiniConda3/bin:$PATH"
+            export PATH="${DISK}/Library/MiniConda3/bin:${PATH}"
         fi
     fi
     unset __conda_setup
