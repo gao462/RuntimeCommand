@@ -55,7 +55,7 @@ _CONDA_() {
     unset __conda_setup
 
     #
-    conda activate GaSOps
+    conda activate Default
 }
 
 #
